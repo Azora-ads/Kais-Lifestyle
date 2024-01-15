@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kais - Lifestyle Studio</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="description"
+        content="Explore a world of elegance and joy at Kais Lifestyle Studio. Shop online for exquisite ornaments, trendy fashion, delightful toys, and more. Elevate your lifestyle with our curated collection. Your one-stop destination for chic and charming treasures.">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <!-- CSS
+    ============================================ -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/font.awesome.css" />
+    <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/venobox.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/mystyles.css">
+    <!-- Minify Version -->
+    <!-- <link rel="stylesheet" href="/assets/css/plugins.min.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css"> -->
+</head>
+
+<body>
+    <div id="buffer">
+
+        <div class="error" id="error-alert">
+            <div class="error__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+                    <path fill="#393a37"
+                        d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="error__title">Connection Timeout</div>
+            <div class="error__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20"
+                    height="20">
+                    <path fill="#393a37"
+                        d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z">
+                    </path>
+                </svg></div>
+        </div>
+        <svg viewBox="25 25 50 50" class="svg-spinner">
+            <circle r="20" cy="50" cx="50"></circle>
+        </svg>
+    </div>
+    <div class="main-wrapper">
+        <header>
+            <!-- Header action area start -->
+            <div class="header-bottom  d-none d-lg-block">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="/"><img src="/assets/images/logo/logo.png" alt="Site Logo"
+                                        style="height: 50px; filter:invert(1);" /></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="search-element">
+                                <div class="form">
+                                    <input type="text" placeholder="Search" id="search-input-bar" />
+                                    <button
+                                        onclick="window.location.href = '/all-items/?search='+document.getElementById('search-input-bar').value;"><i
+                                            class="pe-7s-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <div onclick="window.location.href='/my-wishlist/'"
+                                    class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </div>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart"
+                                    class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <i class="pe-7s-shopbag"></i>
+                                    <span class="header-action-num" id="cart-counter-1">0</span>
+                                </a>
+
+                                <a href="#offcanvas-mobile-menu"
+                                    class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- Header action area start -->
+            <div class="header-bottom d-lg-none sticky-nav style-1">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="/"><img src="/assets/images/logo/logo.png" alt="Site Logo"
+                                        style="height: 50px; filter:invert(1);" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <div onclick="window.location.href='/my-wishlist/'"
+                                    class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </div>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart" id="cart-btn"
+                                    class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <i class="pe-7s-shopbag"></i>
+                                    <span class="header-action-num" id="cart-counter-1">0</span>
+                                </a>
+                                <a href="#offcanvas-mobile-menu"
+                                    class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- header navigation area start -->
+            <div class="header-nav-area d-none d-lg-block sticky-nav">
+                <div class="container">
+                    <div class="header-nav">
+                        <div class="main-menu position-relative">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/all-items/">Products</a></li>
+                                <li><a href="/my-wishlist/">Wishlist</a></li>
+                                <li><a href="/my-cart/">My Cart</a></li>
+                                <li><a href="/checkout/">Checkout</a></li>
+                                <li><a href="/about-us/">About</a></li>
+                                <li><a href="/contact-us/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header navigation area end -->
+        </header>
+        <!-- offcanvas overlay start -->
+        <div class="offcanvas-overlay"></div>
+        <!-- offcanvas overlay end -->
+
+        <!-- OffCanvas Cart Start -->
+        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Cart</span>
+                    <button class="offcanvas-close">x</button>
+                </div>
+                <div class="body customScroll">
+                    <ul class="minicart-product-list" id="cart-lists-navbar">
+
+                        <!--CART LISTS GOES HERE-->
+                        <!--
+                        <li>
+                            <a href="/view-item/?productid=" class="image"><img src="/assets/images/product-image/1.webp" alt="Cart product Image"></a>
+                            <div class="content">
+                                <a href="/view-item/?productid=" class="title">Modern Smart Phone</a>
+                                <span class="quantity-price">1 x <span class="amount">$18.86</span></span>
+                                <a href="#" class="remove">×</a>
+                            </div>
+                        </li>
+                        -->
+
+                    </ul>
+                </div>
+                <div class="foot">
+                    <div class="buttons mt-30px">
+                        <a href="/my-cart/" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
+                        <a href="/checkout/" class="btn btn-outline-dark current-btn">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Cart End -->
+        <!-- OffCanvas Menu Start -->
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <button class="offcanvas-close"></button>
+            <div class="inner customScroll">
+                <div class="offcanvas-menu mb-4">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all-items/">Products</a></li>
+                        <li><a href="/my-wishlist/">Wishlist</a></li>
+                        <li><a href="/my-cart/">My Cart</a></li>
+                        <li><a href="/checkout/">Checkout</a></li>
+                        <li><a href="/about-us/">About</a></li>
+                        <li><a href="/contact-us/">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- OffCanvas Menu End -->
+            </div>
+        </div>
+        <!-- OffCanvas Menu End -->
+        <!-- Hero/Intro Slider Start -->
+        <div class="section ">
+            <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
+                <div class="swiper-wrapper" id="main-slider">
+
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-buttons">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero/Intro Slider End -->
+        <!-- Banner Area Start -->
+        <div class="banner-area style-one pt-100px pb-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="single-banner nth-child-1"
+                            style="background: #ececec; border-radius:8px; height:100%;">
+                            <img src="/assets/images/newimages/Moissanite_mens_wedding_rings___vintage_male_engagement_ring___solid_gold_male_wedding_band___custom_gold_rings_for_men___fathers_day_gift-removebg-preview.png"
+                                alt="" style="width: 100%;">
+                            <div class="banner-content nth-child-1">
+                                <h3 class="title">Awesome Ring For <br>
+                                    Your Hand</h3>
+                                <span class="category"><strong>From ₹300</strong></span>
+                                <a href="/all-items/?search='rings'" class="shop-link"><i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single-banner nth-child-2 mb-30px mb-lm-30px mt-lm-30px"
+                            style="background: #ea00ff6e; border-radius:8px;">
+                            <img src="/assets/images/newimages/Full_Coverage_Foundation_Makeup___Bobbi_Brown_Cosmetics-removebg-preview.png"
+                                alt="" style="width:100%; height:300px; object-fit:contain; object-position: right;">
+                            <div class="banner-content nth-child-2">
+                                <h3 class="title" style="color: rgb(255, 82, 111);">Cosmetics & Beuty</h3>
+                                <span class="category" style="color: #FFFFFF;"><strong>From ₹500</strong></span>
+                                <a href="/all-items/?search='rings'" class="shop-link"><i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="single-banner nth-child-2" style="background: #ff91009f; border-radius:8px;">
+                            <img src="/assets/images/newimages/Designer_Clothes__Shoes___Bags_for_Women___SSENSE-removebg-preview.png"
+                                alt="" style="width: 100%; height:300px; object-fit:contain; object-position:right;">
+                            <div class="banner-content nth-child-3">
+                                <h3 class="title" style="color: rgb(0, 119, 255);">Toys For <br>Your New Born</h3>
+                                <span class="category" style="color: #FFFFFF;"><strong>From ₹100</strong></span>
+                                <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Area End -->
+        <!-- Product Area Start -->
+        <div class="product-area pb-100px">
+            <div class="container">
+                <!-- Section Title & Tab Start -->
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Tab Start -->
+                        <div class="tab-slider d-md-flex justify-content-md-between align-items-md-center">
+                            <ul class="product-tab-nav nav justify-content-start align-items-center">
+                                <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
+                                        data-bs-target="#newarrivals">New Arrivals</button>
+                                </li>
+                                <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                                        data-bs-target="#offered">Offered</button>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- Tab End -->
+                    </div>
+                </div>
+                <!-- Section Title & Tab End -->
+                <div class="row">
+                    <div class="col">
+                        <div class="tab-content mt-60px">
+                            <!-- 1st tab start -->
+                            <div class="tab-pane fade show active" id="newarrivals">
+                                <div class="row mb-n-30px">
+                                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px"
+                                        id="newarrival-layout">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1st tab end -->
+                            <div class="tab-pane fade show" id="offered">
+                                <div class="row mb-n-30px">
+                                    <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px"
+                                        id="offered-layout">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Area End -->
+        <!-- Fashion Area Start -->
+        <div class="fashion-area">
+            <div class="container h-100"
+                style="padding:0; margin:0; max-width:100vw; background:linear-gradient( cyan, teal)">
+                <div class="row justify-content-center align-items-center h-100"
+                    style="background-image:url('/assets/images/newimages/Tiffany___Co_-removebg-preview.png'); background-repeat:no-repeat; background-position:right; background-size:contain; margin:0;">
+                    <div class="col-12 text-center">
+                        <h2 class="title"> <span>Smart Fashion</span> With Lifestyle Studio </h2>
+                        <a href="/all-items/" class="btn btn-primary text-capitalize m-auto">Shop From All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fashion Area End 
+        <div class="banner-area style-two pt-100px pb-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="single-banner nth-child-2 mb-lm-30px">
+                            <img src="/assets/images/banner/6.webp" alt="">
+                            <div class="banner-content nth-child-3">
+                                <h3 class="title">Speaker</h3>
+                                <span class="category">From $69.00</span>
+                                <a href="/view-item/?productid=" class="shop-link">Shop Now <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single-banner nth-child-2">
+                            <img src="/assets/images/banner/7.webp" alt="">
+                            <div class="banner-content nth-child-2">
+                                <h3 class="title">Smartphone</h3>
+                                <span class="category">From $95.00</span>
+                                <a href="/view-item/?productid=" class="shop-link">Shop Now <i class="fa fa-arrow-right"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="feature-product-area pt-100px pb-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h2 class="title">Featured Offers</h2>
+                            <p>Get The Product With Offers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 mb-md-35px mb-lm-35px">
+                        <div class="single-feature-content">
+                            <div class="feature-image">
+                                <img src="/assets/images/feature-image/1.webp" alt="">
+                            </div>
+                            <div class="top-content">
+                                <h4 class="title"><a href="single-product.html">Bluetooth Headphone </a></h4>
+                                <span class="price">
+                                    <span class="old"><del>$48.50</del></span>
+                                    <span class="new">$38.50</span>
+                                </span>
+                            </div>
+                            <div class="bottom-content">
+                                <div class="deal-timing">
+                                    <div data-countdown="2023/09/15"></div>
+                                </div>
+                                <a href="single-product-variable.html" class="btn btn-primary  m-auto"> Shop
+                                    Now </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="feature-right-content">
+                            <div class="image-side">
+                                <img src="/assets/images/feature-image/2.webp" alt="">
+                                <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
+                            </div>
+                            <div class="content-side">
+                                <div class="deal-timing">
+                                    <span>End In:</span>
+                                    <div data-countdown="2024/09/15"></div>
+                                </div>
+                                <div class="prize-content">
+                                    <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                                    <span class="price">
+                                        <span class="old">$48.50</span>
+                                        <span class="new">$38.50</span>
+                                    </span>
+                                </div>
+                                <div class="product-feature">
+                                    <ul>
+                                        <li>Predecessor : <span>None.</span></li>
+                                        <li>Support Type : <span>Neutral.</span></li>
+                                        <li>Cushioning : <span>High Energizing.</span></li>
+                                        <li>Total Weight : <span> 300gm</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-right-content mt-30px">
+                            <div class="image-side">
+                                <img src="/assets/images/feature-image/3.webp" alt="">
+                                <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
+                            </div>
+                            <div class="content-side">
+                                <div class="deal-timing">
+                                    <span>End In:</span>
+                                    <div data-countdown="2023/09/15"></div>
+                                </div>
+                                <div class="prize-content">
+                                    <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                                    <span class="price">
+                                        <span class="old">$48.50</span>
+                                        <span class="new">$38.50</span>
+                                    </span>
+                                </div>
+                                <div class="product-feature">
+                                    <ul>
+                                        <li>Predecessor : <span>None.</span></li>
+                                        <li>Support Type : <span>Neutral.</span></li>
+                                        <li>Cushioning : <span>High Energizing.</span></li>
+                                        <li>Total Weight : <span> 300gm</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        Feature product area End -->
+
+        <!-- Brand area start -->
+        <div class="brand-area pt-100px pb-100px">
+            <div class="container">
+                <div class="brand-slider swiper-container" style="padding:50px 0">
+                    <h1>Our Other Platforms</h1>
+
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide brand-slider-item text-center">
+                            <a href="https://tos-kaisonline.web.app/">
+                                <div>
+                                    <h6>Kais</h6>
+                                    <p>Organic</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center">
+                            <a href="/">
+                                <div>
+                                    <h6>Kais</h6>
+                                    <p>Lifestyle</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide brand-slider-item text-center">
+                            <a href="https://machineries-kaisonline.web.app/">
+                                <div>
+                                    <h6>Kais</h6>
+                                    <p>Machineries</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand area end -->
+        <!-- Blog area start from here -->
+        <div class="main-blog-area pb-100px" style="padding-bottom: 0;">
+            <div class="container">
+                <!-- section title start -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center mb-30px0px">
+                            <h2 class="title">Latest Blog</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- section title start -->
+                <div style="overflow-x: auto; white-space: nowrap; width: 100%; padding: 20px;" id="blog-layout">
+
+
+
+                </div>
+            </div>
+            <!-- Blog area end here -->
+            <!-- Footer Area Start -->
+            <div class="footer-area">
+                <div class="footer-container">
+                    <div class="footer-top">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Start single blog -->
+                                <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
+                                    <div class="single-wedge">
+                                        <div class="footer-logo">
+                                            <a href="/"><img src="/assets/images/logo/footer-logo.png" alt=""
+                                                    style="height: 50px;"></a>
+                                        </div>
+                                        <p class="about-text">Discover elegance at Kais Lifestyle Studio – shop
+                                            ornaments,
+                                            fashion, toys, and more. Elevate your lifestyle with our
+                                            chic collection. Your one-stop for charming treasures.
+                                        </p>
+                                        <ul class="link-follow">
+                                            <li>
+                                                <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer"
+                                                    href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a title="Tumblr" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                        class="fa fa-tumblr" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Facebook" target="_blank" rel="noopener noreferrer"
+                                                    href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Instagram" target="_blank" rel="noopener noreferrer"
+                                                    href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End single blog -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="container">
+                            <div class="line-shape-top line-height-1">
+                                <div class="row flex-md-row-reverse align-items-center">
+
+                                    <div class="col-md-6 text-center text-md-start">
+                                        <p class="copy-text"> © 2023 <a href="https://azoraads.com"><strong>Azora
+                                                    ads</strong></a> all rights reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Area End -->
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal modal-2 fade" id="exampleModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i
+                                class="pe-7s-close"></i></button>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
+                                <!-- Swiper -->
+                                <div class="swiper-container gallery-top">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/zoom-image/1.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/zoom-image/2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/zoom-image/3.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/zoom-image/4.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/zoom-image/5.webp" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-container gallery-thumbs mt-20px slider-nav-style-1 small-nav">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/small-image/1.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/small-image/2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/small-image/3.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/small-image/4.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="img-responsive m-auto"
+                                                src="/assets/images/product-image/small-image/5.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-buttons">
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
+                                <div class="product-details-content quickview-content">
+                                    <h2>Modern Smart Phone</h2>
+                                    <div class="pricing-meta">
+                                        <ul class="d-flex">
+                                            <li class="new-price">$20.90</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-details-rating-wrap">
+                                        <div class="rating-product">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span class="read-review"><a class="reviews" href="#">( 2 Review )</a></span>
+                                    </div>
+                                    <p class="mt-30px">Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do
+                                        eiusmll
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mill veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip exet commodo consequat.
+                                        Duis
+                                        aute irure dolor</p>
+                                    <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                                        <span>SKU:</span>
+                                        <ul class="d-flex">
+                                            <li>
+                                                <a href="#">Ch-256xl</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                                        <span>Categories: </span>
+                                        <ul class="d-flex">
+                                            <li>
+                                                <a href="#">Smart Device, </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">ETC</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                                        <span>Tags: </span>
+                                        <ul class="d-flex">
+                                            <li>
+                                                <a href="#">Smart Device, </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Phone</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-details-quality">
+                                        <div class="cart-plus-minus">
+                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
+                                        </div>
+                                        <div class="pro-details-cart">
+                                            <button class="add-cart"> Add To
+                                                Cart</button>
+                                        </div>
+                                        <div class="pro-details-compare-wishlist pro-details-wishlist ">
+                                            <a href="/my-wishlist/"><i class="pe-7s-like"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="payment-img">
+                                        <a href="#"><img src="/assets/images/icons/payment.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal end -->
+        <!-- Modal Cart -->
+        <div class="modal customize-class fade" id="exampleModal-Cart" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                class="pe-7s-close"></i></button>
+                        <div class="tt-modal-messages">
+                            <i class="pe-7s-check"></i> Added to cart successfully!
+                        </div>
+                        <div class="tt-modal-product">
+                            <div class="tt-img">
+                                <img src="/assets/images/product-image/1.webp" alt="Modern Smart Phone">
+                            </div>
+                            <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal wishlist -->
+        <div class="modal customize-class fade" id="exampleModal-Wishlist" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                class="pe-7s-close"></i></button>
+                        <div class="tt-modal-messages">
+                            <i class="pe-7s-check"></i> Added to Wishlist successfully!
+                        </div>
+                        <div class="tt-modal-product">
+                            <div class="tt-img">
+                                <img src="/assets/images/product-image/1.webp" alt="Modern Smart Phone">
+                            </div>
+                            <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal compare -->
+        <div class="modal customize-class fade" id="exampleModal-Compare" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                                class="pe-7s-close"></i></button>
+                        <div class="tt-modal-messages">
+                            <i class="pe-7s-check"></i> Added to compare successfully!
+                        </div>
+                        <div class="tt-modal-product">
+                            <div class="tt-img">
+                                <img src="/assets/images/product-image/1.webp" alt="Modern Smart Phone">
+                            </div>
+                            <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Global Vendor, plugins JS -->
+        <!-- JS Files
+    ============================================ -->
+        <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="/assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+        <script src="/assets/js/vendor/modernizr-3.11.2.min.js"></script>
+        <script src="/assets/js/plugins/jquery.countdown.min.js"></script>
+        <script src="/assets/js/plugins/swiper-bundle.min.js"></script>
+        <script src="/assets/js/plugins/scrollUp.js"></script>
+        <script src="/assets/js/plugins/venobox.min.js"></script>
+        <script src="/assets/js/plugins/jquery-ui.min.js"></script>
+        <script src="/assets/js/plugins/mailchimp-ajax.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.15.5-0/firebase.js"></script>
+        <script src="/firebase-config.js"></script>
+        <script src="/cart.js"></script>
+
+        <!-- Minify Version -->
+        <!-- <script src="/assets/js/vendor.min.js"></script>
+    <script src="/assets/js/plugins.min.js"></script>
+    <script src="/assets/js/main.min.js"></script> -->
+
+        <!--Main JS (Common Activation Codes)-->
+        <script src="/assets/js/main.js"></script>
+</body>
+
+
+</html>

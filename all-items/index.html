@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle Studio - Products</title>
+    <meta name="robots" content="index, follow" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <!-- CSS
+    ============================================ -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/font.awesome.css" />
+    <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/venobox.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/mystyles.css">
+
+    <!-- Minify Version -->
+    <!-- <link rel="stylesheet" href="/assets/css/plugins.min.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css"> -->
+</head>
+
+<body>
+    <div id="buffer">
+
+        <div class="error" id="error-alert">
+            <div class="error__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+                    <path fill="#393a37"
+                        d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="error__title">Connection Timeout</div>
+            <div class="error__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20"
+                    height="20">
+                    <path fill="#393a37"
+                        d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z">
+                    </path>
+                </svg></div>
+        </div>
+        <svg viewBox="25 25 50 50" class="svg-spinner">
+            <circle r="20" cy="50" cx="50"></circle>
+        </svg>
+    </div>
+    <div class="main-wrapper">
+        <header>
+
+            <!-- Header action area start -->
+            <div class="header-bottom  d-none d-lg-block">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="/"><img src="/assets/images/logo/logo.png" alt="Site Logo"
+                                        style="height: 50px; filter:invert(1)" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="search-element">
+                                <div class="form">
+                                    <input type="text" placeholder="Search" id="search-input" />
+                                    <button
+                                        onclick="window.location.href = '/all-items/?search='+document.getElementById('search-input-bar').value;"><i
+                                            class="pe-7s-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <div onclick="window.location.href='/my-wishlist/'"
+                                    class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </div>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart"
+                                    class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0"
+                                    id="cart-btn">
+                                    <i class="pe-7s-shopbag"></i>
+                                    <span class="header-action-num" id="cart-counter-1">0</span>
+                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                </a>
+                                <a href="#offcanvas-mobile-menu"
+                                    class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- Header action area start -->
+            <div class="header-bottom d-lg-none sticky-nav style-1">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="/"><img src="/assets/images/logo/logo.png" alt="Site Logo"
+                                        style="height: 50px; filter:invert(1);" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="search-element">
+                                <div class="form">
+                                    <input type="text" placeholder="Search" id="search-input-bar" />
+                                    <button
+                                        onclick="window.location.href = '/all-items/?search='+document.getElementById('search-input-bar').value;"><i
+                                            class="pe-7s-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <div onclick="window.location.href='/my-wishlist/'"
+                                    class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </div>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart"
+                                    class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <i class="pe-7s-shopbag"></i>
+                                    <span class="header-action-num" id="cart-counter-1">0</span>
+                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                </a>
+                                <a href="#offcanvas-mobile-menu"
+                                    class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- header navigation area start -->
+            <div class="header-nav-area d-none d-lg-block sticky-nav">
+                <div class="container">
+                    <div class="header-nav">
+                        <div class="main-menu position-relative">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/all-items/">Products</a></li>
+                                <li><a href="/my-wishlist/">Wishlist</a></li>
+                                <li><a href="/my-cart/">My Cart</a></li>
+                                <li><a href="/checkout/">Checkout</a></li>
+                                <li><a href="/about-us/">About</a></li>
+                                <li><a href="/contact-us/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header navigation area end -->
+            <div class="mobile-search-box d-lg-none">
+                <div class="container">
+                    <!-- mobile search start -->
+                    <div class="search-element max-width-100">
+                        <div class="form">
+                            <input type="text" placeholder="Search" />
+                            <button><i class="pe-7s-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- mobile search start -->
+                </div>
+            </div>
+        </header>
+        <!-- offcanvas overlay start -->
+        <div class="offcanvas-overlay"></div>
+        <!-- offcanvas overlay end -->
+
+        <!-- OffCanvas Cart Start -->
+        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Cart</span>
+                    <button class="offcanvas-close">x</button>
+                </div>
+                <div class="body customScroll">
+                    <ul class="minicart-product-list" id="cart-lists-navbar">
+
+                        <!--CART LISTS GOES HERE-->
+                        <!--
+                                <li>
+                                    <a href="single-product.html" class="image"><img src="/assets/images/product-image/1.webp" alt="Cart product Image"></a>
+                                    <div class="content">
+                                        <a href="single-product.html" class="title">Modern Smart Phone</a>
+                                        <span class="quantity-price">1 x <span class="amount">$18.86</span></span>
+                                        <a href="#" class="remove">×</a>
+                                    </div>
+                                </li>
+                                -->
+
+                    </ul>
+                </div>
+                <div class="foot">
+                    <div class="buttons mt-30px">
+                        <a href="/my-cart/" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
+                        <a href="/checkout/" class="btn btn-outline-dark current-btn">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Cart End -->
+        <!-- OffCanvas Menu Start -->
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <button class="offcanvas-close"></button>
+            <div class="inner customScroll">
+                <div class="offcanvas-menu mb-4">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all-items/">Products</a></li>
+                        <li><a href="/my-wishlist/">Wishlist</a></li>
+                        <li><a href="/my-cart/">My Cart</a></li>
+                        <li><a href="/checkout/">Checkout</a></li>
+                        <li><a href="/about-us/">About</a></li>
+                        <li><a href="/contact-us/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Menu End -->
+        <!-- Shop Page Start  -->
+        <div id="empty-list"
+            style="width:100vw; display:flex; justify-content:center; align-items:center; flex-direction:column; margin:30px 0;">
+            <iframe src="https://lottie.host/?file=5f7cc24e-9fbb-42c8-8205-1e9b56a5ad28/FO7yubtZct.json"></iframe>
+            <h2>No Product Found</h2>
+        </div>
+        <div class="shop-category-area pt-100px pb-100px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9" style="width: 100%;">
+                        <!-- Shop Top Area Start -->
+                        <div class="shop-top-bar d-flex" style="margin:0;">
+                            <!-- Left Side End -->
+
+                            <!-- Right Side Start -->
+                            <div class="select-shoing-wrap d-flex align-items-center">
+                                <div class="shot-product">
+                                    <p>Sort By:</p>
+                                </div>
+                                <!-- Single Wedge End -->
+                                <div class="header-bottom-set dropdown">
+                                    <button class="dropdown-toggle header-action-btn" data-bs-toggle="dropdown">Default
+                                        <i class="fa fa-angle-down"></i></button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a class="dropdown-item" href="#">Name, A to Z</a></li>
+                                        <li><a class="dropdown-item" href="#">Name, Z to A</a></li>
+                                        <li><a class="dropdown-item" href="#">Price, low to high</a></li>
+                                        <li><a class="dropdown-item" href="#">Price, high to low</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Single Wedge Start -->
+                            </div>
+                            <!-- Right Side End -->
+                        </div>
+                        <!-- Shop Top Area End -->
+                        <!-- Shop Bottom Area Start -->
+                        <div class="shop-bottom-area" style="width: 100%;">
+                            <!-- Tab Content Area Start -->
+                            <div class="row" style="width: 100%;">
+                                <div class="col-lg-3" style="margin-top: 40px;">
+                                    <div class="shop-sidebar-wrap">
+                                        <!-- Sidebar single item -->
+                                        <div class="sidebar-widget">
+                                            <h4 class="sidebar-title">Top Categories</h4>
+                                            <div class="sidebar-widget-category">
+                                                <ul id="categories-lists">
+
+                                                    <!--
+                                                        <li><a href="/all-items/?category=" class="selected m-0"> All
+                                                                <span>(65)</span> </a></li>
+                                                        -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Sidebar single item -->
+                                        <div class="sidebar-widget mt-8">
+                                            <h4 class="sidebar-title">Price Filter</h4>
+                                            <div class="price-filter">
+                                                <div class="price-slider-amount">
+                                                    <input type="text" id="amount" class="p-0 h-auto lh-1" name="price"
+                                                        placeholder="Add Your Price" />
+                                                </div>
+                                                <div id="slider-range"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Sidebar single item -->
+
+                                    </div>
+                                </div>
+
+                                <div class="col" style="margin-top: 40px;">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="shop-grid">
+                                            <div class="row mb-n-30px" style="width: 100%;">
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 mb-30px"
+                                                    id="product-lists">
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab Content Area End -->
+                            <!--  Pagination Area Start -->
+                            <div class="pro-pagination-style text-center text-lg-end" data-aos="fade-up"
+                                data-aos-delay="200">
+                                <div class="pages">
+                                    <ul>
+                                        <li class="li"><a class="page-link" href="#" id="link-previous"><i
+                                                    class="fa fa-angle-left"></i></a>
+                                        </li>
+                                        <li class="li"><a class="page-link active" href="#" id="curr">1</a></li>
+                                        <li class="li"><a class="page-link" href="#" id="link-next"><i
+                                                    class="fa fa-angle-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--  Pagination Area End -->
+                        </div>
+                        <!-- Shop Bottom Area End -->
+                    </div>
+                    <!-- Sidebar Area Start -->
+                </div>
+            </div>
+        </div>
+        <!-- Shop Page End  -->
+        <!-- Footer Area Start -->
+        <div class="footer-area">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Start single blog -->
+                            <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
+                                <div class="single-wedge">
+                                    <div class="footer-logo">
+                                        <a href="/"><img src="/assets/images/logo/footer-logo.png" alt=""
+                                                style="height: 50px;"></a>
+                                    </div>
+                                    <p class="about-text">Discover elegance at Kais Lifestyle Studio – shop ornaments,
+                                        fashion,
+                                        toys, and more. Elevate your lifestyle with our
+                                        chic collection. Your one-stop for charming treasures.
+                                    </p>
+                                    <ul class="link-follow">
+                                        <li>
+                                            <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer"
+                                                href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a title="Tumblr" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                    class="fa fa-tumblr" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Facebook" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                    class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Instagram" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                    class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End single blog -->
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="line-shape-top line-height-1">
+                            <div class="row flex-md-row-reverse align-items-center">
+
+                                <div class="col-md-6 text-center text-md-start">
+                                    <p class="copy-text"> © 2023 <a href="https://azoraads.com"><strong>Azora
+                                                ads</strong></a>
+                                        all rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Area End -->
+    </div>
+    <!-- Global Vendor, plugins JS -->
+    <!-- JS Files
+    ============================================ -->
+    <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="/assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="/assets/js/plugins/jquery.countdown.min.js"></script>
+    <script src="/assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="/assets/js/plugins/scrollUp.js"></script>
+    <script src="/assets/js/plugins/venobox.min.js"></script>
+    <script src="/assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="/assets/js/plugins/mailchimp-ajax.js"></script>
+
+    <!-- Minify Version -->
+    <!-- <script src="/assets/js/vendor.min.js"></script>
+    <script src="/assets/js/plugins.min.js"></script>
+    <script src="/assets/js/main.min.js"></script> -->
+
+    <!--Main JS (Common Activation Codes)-->
+    <script src="/assets/js/main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.15.5-0/firebase.js"></script>
+    <script src="util.js"></script>
+    <script src="/cart.js"></script>
+    <!--<script src="/cart.js"></script>-->
+</body>
+
+</html>

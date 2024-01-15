@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <meta name="robots" content="index, follow" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <!-- CSS
+    ============================================ -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/font.awesome.css" />
+    <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/venobox.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/mystyles.css">
+
+    <!-- Minify Version -->
+    <!-- <link rel="stylesheet" href="/assets/css/plugins.min.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css"> -->
+</head>
+
+<body>
+    <div id="buffer">
+
+        <div class="error" id="error-alert">
+            <div class="error__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+                    <path fill="#393a37"
+                        d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="error__title">Connection Timeout</div>
+            <div class="error__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20"
+                    height="20">
+                    <path fill="#393a37"
+                        d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z">
+                    </path>
+                </svg></div>
+        </div>
+        <svg viewBox="25 25 50 50" class="svg-spinner">
+            <circle r="20" cy="50" cx="50"></circle>
+        </svg>
+    </div>
+    <div class="main-wrapper">
+        <header>
+            <!-- Header action area start -->
+            <div class="header-bottom  d-none d-lg-block">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="/"><img src="/assets/images/logo/logo.png" alt="Site Logo"
+                                        style="height: 50px; filter:invert(1);" /></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <div onclick="window.location.href='/my-wishlist/'"
+                                    class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </div>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart"
+                                    class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0"
+                                    id="cart-btn">
+                                    <i class="pe-7s-shopbag"></i>
+                                    <span class="header-action-num" id="cart-counter-1">0</span>
+                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                </a>
+                                <a href="#offcanvas-mobile-menu"
+                                    class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- Header action area start -->
+            <div class="header-bottom d-lg-none sticky-nav style-1">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="/"><img src="/assets/images/logo/logo.png" alt="Site Logo"
+                                        style="height: 50px; filter:invert(1);" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <div onclick="window.location.href='/my-wishlist/'"
+                                    class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </div>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart"
+                                    class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <i class="pe-7s-shopbag"></i>
+                                    <span class="header-action-num" id="cart-counter-1">0</span>
+                                    <!-- <span class="cart-amount">€30.00</span> -->
+                                </a>
+                                <a href="#offcanvas-mobile-menu"
+                                    class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- header navigation area start -->
+            <div class="header-nav-area d-none d-lg-block sticky-nav">
+                <div class="container">
+                    <div class="header-nav">
+                        <div class="main-menu position-relative">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/all-items/">Products</a></li>
+                                <li><a href="/my-wishlist/">Wishlist</a></li>
+                                <li><a href="/my-cart/">My Cart</a></li>
+                                <li><a href="/checkout/">Checkout</a></li>
+                                <li><a href="/about-us/">About</a></li>
+                                <li><a href="/contact-us/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header navigation area end -->
+
+        </header>
+        <!-- offcanvas overlay start -->
+        <div class="offcanvas-overlay"></div>
+        <!-- offcanvas overlay end -->
+
+        <!-- OffCanvas Cart Start -->
+        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Cart</span>
+                    <button class="offcanvas-close">×</button>
+                </div>
+                <div class="body customScroll">
+                    <ul class="minicart-product-list" id="cart-lists-navbar">
+
+                        <!--
+                        <li>
+                            <a href="single-product.html" class="image"><img src="/assets/images/product-image/1.webp"
+                                    alt="Cart product Image"></a>
+                            <div class="content">
+                                <a href="single-product.html" class="title">Modern Smart Phone</a>
+                                <span class="quantity-price">1 x <span class="amount">$18.86</span></span>
+                                <a href="#" class="remove">×</a>
+                            </div>
+                        </li>
+                        -->
+
+
+                    </ul>
+                </div>
+                <div class="foot">
+                    <div class="buttons mt-30px">
+                        <a href="/my-cart/" class="btn btn-dark btn-hover-primary mb-30px">view cart</a>
+                        <a href="/checkout/" class="btn btn-outline-dark current-btn">checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Cart End -->
+        <!-- OffCanvas Menu Start -->
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <button class="offcanvas-close"></button>
+            <div class="inner customScroll">
+                <div class="offcanvas-menu mb-4">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all-items/">Products</a></li>
+                        <li><a href="/my-wishlist/">Wishlist</a></li>
+                        <li><a href="/my-cart/">My Cart</a></li>
+                        <li><a href="/checkout/">Checkout</a></li>
+                        <li><a href="/about-us/">About</a></li>
+                        <li><a href="/contact-us/">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- OffCanvas Menu End -->
+            </div>
+        </div>
+        <!-- OffCanvas Menu End -->
+
+        <!-- Product Details Area Start -->
+        <div class="product-details-area pt-100px pb-10px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
+                        <div
+                            class="product-details-img product-details-tab product-details-tab-2 product-details-tab-3 d-flex">
+                            <div
+                                class="swiper-container ml-15px zoom-thumbs-2 align-self-start slider-nav-style-1 small-nav">
+                                <div class="swiper-wrapper" id="thumb-selector">
+
+
+                                </div>
+
+                            </div>
+                            <!-- Swiper -->
+                            <div class="swiper-container zoom-top-2 align-self-start">
+                                <div class="swiper-wrapper" id="thumb-swiper">
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-details-content quickview-content ml-25px">
+                            <h2 id="title-txt"></h2>
+                            <div class="pricing-meta">
+                                <ul class="d-flex">
+                                    <li class="new-price" id="offer-price">
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <p class="mt-30px" id="product-description"></p>
+                            <div class="pro-details-color-size d-flex">
+                                <!-- Right Side Start -->
+                                <div class="select-shoing-wrap d-flex align-items-center">
+                                    <div class="shot-product">
+                                        <p>Color:</p>
+                                    </div>
+                                    <div class="shop-select">
+                                        <select class="shop-sort" id="color-wrapper" style="text-transform: capitalize;"
+                                            onchange="refreshWithColor(this)">
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Right Side End -->
+                                <!-- Right Side Start -->
+                                <div class="select-shoing-wrap d-flex align-items-center ml-30px">
+                                    <div class="shot-product">
+                                        <p>Size:</p>
+                                    </div>
+                                    <div class="shop-select show">
+                                        <select class="shop-sort" id="size-wrapper" style="text-transform: capitalize;"
+                                            onchange="refreshWithSize(this)">
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Right Side End -->
+                            </div>
+
+                            <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                                <span>Categories: </span>
+                                <ul class="d-flex">
+                                    <li>
+                                        <a href="#" id="cat-txt"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pro-details-quality">
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1"
+                                        id="qty-value" />
+                                </div>
+                                <div class="pro-details-cart">
+                                    <button class="add-cart"
+                                        onclick="addToCart(se.get('productid'),document.getElementById('qty-value').value,labelID,colorParam,this)">
+                                        Add To
+                                        Cart</button>
+                                </div>
+                                <div class="pro-details-compare-wishlist pro-details-wishlist ">
+                                    <a href="/my-wishlist/"><i class="pe-7s-like"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product details description area start -->
+
+                        <!-- product details description area end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Area Start -->
+        <div class="product-area related-product" style="margin-top: 80px;">
+            <div class="container">
+                <!-- Section Title & Tab Start -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center m-0">
+                            <h2 class="title">Related Products</h2>
+                            <p>There are many related product of these</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section Title & Tab End -->
+                <div class="row">
+                    <div class="col">
+                        <div class="new-product-slider swiper-container slider-nav-style-1">
+                            <div class="swiper-wrapper" id="product-lists">
+
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-buttons">
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Area End -->
+        <!-- Footer Area Start -->
+        <div class="footer-area">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Start single blog -->
+                            <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
+                                <div class="single-wedge">
+                                    <div class="footer-logo">
+                                        <a href="/"><img src="/assets/images/logo/footer-logo.png" alt=""
+                                                style="height: 50px;"></a>
+                                    </div>
+                                    <p class="about-text">Discover elegance at Kais Lifestyle Studio – shop ornaments,
+                                        fashion,
+                                        toys, and more. Elevate your lifestyle with our
+                                        chic collection. Your one-stop for charming treasures.
+                                    </p>
+                                    <ul class="link-follow">
+                                        <li>
+                                            <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer"
+                                                href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a title="Tumblr" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                    class="fa fa-tumblr" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Facebook" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                    class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="Instagram" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                    class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End single blog -->
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="line-shape-top line-height-1">
+                            <div class="row flex-md-row-reverse align-items-center">
+
+                                <div class="col-md-6 text-center text-md-start">
+                                    <p class="copy-text"> © 2023 <a href="https://azoraads.com"><strong>Azora
+                                                ads</strong></a>
+                                        all rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Area End -->
+    </div>
+    <!-- JS Files
+    ============================================ -->
+    <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="/assets/js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="/assets/js/plugins/jquery.countdown.min.js"></script>
+    <script src="/assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="/assets/js/plugins/scrollUp.js"></script>
+    <script src="/assets/js/plugins/venobox.min.js"></script>
+    <script src="/assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="/assets/js/plugins/mailchimp-ajax.js"></script>
+
+    <!-- Minify Version -->
+    <!-- <script src="/assets/js/vendor.min.js"></script>
+    <script src="/assets/js/plugins.min.js"></script>
+    <script src="/assets/js/main.min.js"></script> -->
+
+    <!--Main JS (Common Activation Codes)-->
+    <script src="/assets/js/main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.15.5-0/firebase.js"></script>
+    <script src="util.js"></script>
+    <script src="/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+.cust-add-to-cart{
+    background-color: #266bf9;
+    color: #FFFFFF;
+    padding: 5px 15px;
+    border-radius: 60px;
+}
+.cust-wishlist{
+    border: 1px solid #CCC;
+    width:30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cust-wishlist-active{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 8, 0);
+    color: #FFFFFF;
+    border: 1px solid rgb(255, 8, 0);
+}
+.brand-slider h1{
+    font-weight: 600;
+    color: #444;
+    margin: 20px;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+.brand-slider-item a div{
+    border: 2px solid #DDD;
+    padding:20px 0;
+    margin: 0 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in;
+}
+.brand-slider-item a div h6{
+    font-size: 35px;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+    transition: all 0.3s ease-in;
+}
+.brand-slider-item a div p{
+    font-size: 22px;
+    color: #AAA;
+    margin: 0;
+    transition: all 0.3s ease-in;
+}
+.brand-slider-item a div:hover{
+    border: 2px solid #266bf9;
+}
+.brand-slider-item a div:hover > h6{
+    color: #266bf9;
+}
+.brand-slider-item a div:hover>p {
+    color: #266cf980;
+}
+#buffer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    z-index: 99999;
+}
+
+#buffer .svg-spinner {
+    width: 20vw;
+    max-width: 100px;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+
+#buffer .svg-spinner circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash4 {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
+
+.error {
+    position: absolute;
+    top: -200px;
+    left: 20vw;
+    right: 20vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: auto;
+    padding: 15px;
+    background: #EF665B;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px -3px #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in;
+}
+
+.error__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.error__icon path {
+    fill: #fff;
+}
+
+.error__title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+}
+
+.error__close path {
+    fill: #fff;
+}
+.img-slider-layout{
+    width: 500px !important;
+    object-fit:contain;
+    height:400px;
+}
+@media screen and (max-width:700px) {
+    .img-container {
+        transform: translateY(-80px);
+    }
+    .header-cont {
+        margin-top: 50px;
+    }
+}
