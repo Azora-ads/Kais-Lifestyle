@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Checkout</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
+
+    <!--== Google Fonts ==-->
+
+    <!--== Bootstrap CSS ==-->
+    <link href="/assets01/css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Font Awesome Min Icon CSS ==-->
+    <link href="/assets01/css/font-awesome.min.css" rel="stylesheet" />
+    <!--== Pe7 Stroke Icon CSS ==-->
+    <link href="/assets01/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!--== Swiper CSS ==-->
+    <link href="/assets01/css/swiper.min.css" rel="stylesheet" />
+    <!--== Fancybox Min CSS ==-->
+    <link href="/assets01/css/fancybox.min.css" rel="stylesheet" />
+    <!--== Aos Min CSS ==-->
+    <link href="/assets01/css/aos.min.css" rel="stylesheet" />
+
+    <!--== Main Style CSS ==-->
+    <link href="/assets01/css/style.css" rel="stylesheet" />
+    <link href="/mystyles.css" rel="stylesheet" />
+
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="buffer">
+
+        <div class="error" id="error-alert">
+            <div class="error__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" height="24" fill="none">
+                    <path fill="#393a37"
+                        d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="error__title">Connection Timeout</div>
+            <div class="error__close"><svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20"
+                    height="20">
+                    <path fill="#393a37"
+                        d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z">
+                    </path>
+                </svg></div>
+        </div>
+        <svg viewBox="25 25 50 50" class="svg-spinner">
+            <circle r="20" cy="50" cx="50"></circle>
+        </svg>
+    </div>
+    <!--wrapper start-->
+    <div class="wrapper">
+
+        <!--== Start Header Wrapper ==-->
+        <header class="main-header-wrapper position-relative">
+            <div class="header-middle">
+                <div class="container pt--0 pb--0">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <div class="header-middle-align">
+                                <div class="header-middle-align-start">
+                                    <div class="header-logo-area">
+                                        <a href="/">
+                                            <img class="logo-main" src="/assets/images/logo/logo.png"
+                                                style="height: 50px;" alt="Logo" />
+                                            <img class="logo-light" src="/assets/images/logo/logo.png"
+                                                style="height: 50px;" alt="Logo" />
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-area header-default">
+                <div class="container">
+                    <div class="row no-gutter align-items-center position-relative">
+                        <div class="col-12">
+                            <div class="header-align">
+                                <div class="header-navigation-area position-relative">
+                                    <ul class="main-menu nav">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/all-items/">Products</a></li>
+                                        <li><a href="/my-wishlist/">Wishlist</a></li>
+                                        <li><a href="/my-cart/">My Cart</a></li>
+                                        <li><a href="/checkout/">Checkout</a></li>
+                                        <li><a href="/about-us/">About</a></li>
+                                        <li><a href="/contact-us/">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--== End Header Wrapper ==-->
+
+        <main class="main-content">
+
+            <!--== Start Shopping Checkout Area Wrapper ==-->
+            <section class="shopping-checkout-wrap">
+                <div class="container" style="padding-top: 30px;">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!--== Start Billing Accordion ==-->
+                            <div class="checkout-billing-details-wrap">
+                                <h2 class="title">Billing details</h2>
+                                <div class="billing-form-wrap">
+                                    <form action="#" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="f_name">Name <abbr class="required"
+                                                            title="required">*</abbr></label>
+                                                    <input id="nme-input" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="address1-input">Street address <abbr class="required"
+                                                            title="required">*</abbr></label>
+                                                    <input id="address1-input" type="text" class="form-control"
+                                                        placeholder="House number and street name">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="address2-input">Town / City <abbr class="required"
+                                                            title="required">*</abbr></label>
+                                                    <input id="address2-input" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="address3-input">District <abbr class="required"
+                                                            title="required">*</abbr></label>
+                                                    <input id="address3-input" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="pz-code">Postcode / ZIP (optional)</label>
+                                                    <input id="pz-code" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="ph-input">Phone <abbr class="required"
+                                                            title="required">*</abbr></label>
+                                                    <input id="ph-input" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group" data-margin-bottom="30">
+                                                    <label for="email-input">Email address <abbr class="required"
+                                                            title="required">*</abbr></label>
+                                                    <input id="email-input" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--== End Billing Accordion ==-->
+                        </div>
+                        <div class="col-lg-6">
+                            <!--== Start Order Details Accordion ==-->
+                            <div class="checkout-order-details-wrap">
+                                <div class="order-details-table-wrap table-responsive">
+                                    <h2 class="title mb-25">Your order</h2>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="product-name">Product</th>
+                                                <th class="product-total">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-body" id="product-lists">
+
+
+                                        </tbody>
+                                        <tfoot class="table-foot">
+                                            <tr class="cart-subtotal">
+                                                <th>Subtotal</th>
+                                                <td id="cart-sub-tot"></td>
+                                            </tr>
+                                            <tr class="shipping">
+                                                <th>GST</th>
+                                                <td id="cart-gst"></td>
+                                            </tr>
+                                            <tr class="order-total">
+                                                <th>Total </th>
+                                                <td id="order-tot"></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="shop-payment-method">
+                                        <button onclick="placeOrder()" class="btn-theme">Place order</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--== End Order Details Accordion ==-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--== End Shopping Checkout Area Wrapper ==-->
+        </main>
+
+        <!--== Start Footer Area Wrapper ==-->
+        <footer class="footer-area">
+            <!--== Start Footer Main ==-->
+            <div class="footer-main">
+                <div class="container pt--0 pb--0">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <!--== Start widget Item ==-->
+                            <div class="widget-item">
+                                <div class="about-widget-wrap">
+                                    <div class="widget-logo-area">
+                                        <a href="/">
+                                            <img class="logo-main" src="/assets/images/logo/logo.png"
+                                                style="height: 80px; filter:invert(0.8)" alt="Logo" />
+                                        </a>
+                                    </div>
+                                    <p class="desc">Discover elegance at Kais Lifestyle Studio – shop ornaments,
+                                        fashion, toys, and more. Elevate your lifestyle with our
+                                        chic collection. Your one-stop for charming treasures.</p>
+                                    <div class="social-icons">
+                                        <a href="../../../external.html?link=https://www.facebook.com/" target="_blank"
+                                            rel="noopener"><i class="fa fa-facebook"></i></a>
+                                        <a href="../../../external.html?link=https://dribbble.com/" target="_blank"
+                                            rel="noopener"><i class="fa fa-dribbble"></i></a>
+                                        <a href="../../../external.html?link=https://www.pinterest.com/" target="_blank"
+                                            rel="noopener"><i class="fa fa-pinterest-p"></i></a>
+                                        <a href="../../../external.html?link=https://twitter.com/" target="_blank"
+                                            rel="noopener"><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--== End widget Item ==-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--== End Footer Main ==-->
+
+            <!--== Start Footer Bottom ==-->
+            <div class="footer-bottom">
+                <div class="container pt--0 pb--0">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start"
+                            style="display:flex; justify-content:center; align-items:center; width:100%; color: #FFFFFF;">
+                            <p class="copy-text"> © 2023 <a href="https://azoraads.com"><strong>Azora ads</strong></a>
+                                all rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--== End Footer Bottom ==-->
+        </footer>
+        <!--== End Footer Area Wrapper ==-->
+
+        <!--== Scroll Top Button ==-->
+        <div id="scroll-to-top" class="scroll-to-top"><span class="fa fa-angle-up"></span></div>
+
+        <!--== Start Quick View Menu ==-->
+
+        <!--== End Aside Search Menu ==-->
+
+        <!--== Start Side Menu ==-->
+        <div class="off-canvas-wrapper offcanvas offcanvas-start" tabindex="-1" id="AsideOffcanvasMenu"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h1 id="offcanvasExampleLabel"></h1>
+                <button class="btn-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">menu <i
+                        class="fa fa-chevron-left"></i></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Mobile Menu Start -->
+                <div class="mobile-menu-items">
+                    <ul class="nav-menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/all-items/">Products</a></li>
+                        <li><a href="/my-wishlist/">Wishlist</a></li>
+                        <li><a href="/my-cart/">My Cart</a></li>
+                        <li><a href="/checkout/">Checkout</a></li>
+                        <li><a href="/about-us/">About</a></li>
+                        <li><a href="/contact-us/">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Mobile Menu End -->
+            </div>
+        </div>
+        <!--== End Side Menu ==-->
+    </div>
+
+    <!--=======================Javascript============================-->
+
+    <!--=== jQuery Modernizr Min Js ===-->
+    <script src="/assets01/js/modernizr.js"></script>
+    <!--=== jQuery Min Js ===-->
+    <script src="/assets01/js/jquery-main.js"></script>
+    <!--=== jQuery Migration Min Js ===-->
+    <script src="/assets01/js/jquery-migrate.js"></script>
+    <!--=== jQuery Popper Min Js ===-->
+    <script src="/assets01/js/popper.min.js"></script>
+    <!--=== jQuery Bootstrap Min Js ===-->
+    <script src="/assets01/js/bootstrap.min.js"></script>
+    <!--=== jQuery Ui Min Js ===-->
+    <script src="/assets01/js/jquery-ui.min.js"></script>
+    <!--=== jQuery Swiper Min Js ===-->
+    <script src="/assets01/js/swiper.min.js"></script>
+    <!--=== jQuery Fancybox Min Js ===-->
+    <script src="/assets01/js/fancybox.min.js"></script>
+    <!--=== jQuery Waypoint Js ===-->
+    <script src="/assets01/js/waypoint.js"></script>
+    <!--=== jQuery Parallax Min Js ===-->
+    <script src="/assets01/js/parallax.min.js"></script>
+    <!--=== jQuery Aos Min Js ===-->
+    <script src="/assets01/js/aos.min.js"></script>
+
+    <!--=== jQuery Custom Js ===-->
+    <script src="/assets01/js/custom.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.15.5-0/firebase.js"></script>
+    <script src="util.js"></script>
+</body>
+
+
+
+</html>
